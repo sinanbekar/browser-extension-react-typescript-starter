@@ -1,0 +1,5 @@
+{
+  "extends": ["config:base", ":semanticCommits"],
+  "reviewers": ["sinanbekar"],
+  "stabilityDays": 3
+}
