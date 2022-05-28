@@ -1100,18 +1100,6 @@
     "@commitlint/types" "^17.0.0"
     ajv "^6.12.6"
 
-"@commitlint/cz-commitlint@17.0.0":
-  version "17.0.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/cz-commitlint/-/cz-commitlint-17.0.0.tgz#f594848a84bc0764c22c79a54d6c7e219e91ed40"
-  integrity sha512-Cq5rb3pUJRIp8M17/w8iUmDup/7KOZVt3OSDa3LKym9y9Y7/7MhiOHfWvTYcMJIOYT7TRbxVycbVvx5hPPjZ/A==
-  dependencies:
-    "@commitlint/ensure" "^17.0.0"
-    "@commitlint/load" "^17.0.0"
-    "@commitlint/types" "^17.0.0"
-    chalk "^4.1.0"
-    lodash "^4.17.21"
-    word-wrap "^1.2.3"
-
 "@commitlint/ensure@^17.0.0":
   version "17.0.0"
   resolved "https://registry.yarnpkg.com/@commitlint/ensure/-/ensure-17.0.0.tgz#781ff5f8870cb98ce4496d5c71649a4cd122a0e0"
@@ -4022,6 +4010,11 @@ hard-rejection@^2.1.0:
   resolved "https://registry.yarnpkg.com/hard-rejection/-/hard-rejection-2.1.0.tgz#1c6eda5c1685c63942766d79bb40ae773cecd883"
   integrity sha512-VIZB+ibDhx7ObhAe7OVtoEbuP4h/MuOTHJ+J8h/eBXotJYl0fBgR72xDFCKgIh22OJZIOVNxBMWuhAr10r8HdA==
 
+harmony-reflect@^1.4.6:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/harmony-reflect/-/harmony-reflect-1.6.2.tgz#31ecbd32e648a34d030d86adb67d4d47547fe710"
+  integrity sha512-HIp/n38R9kQjDEziXyDTuW3vvoxxyxjxFzXLrBr18uB47GnSt+G9D29fqrpM5ZkspMcPICud3XsBJQ4Y2URg8g==
+
 has-bigints@^1.0.1, has-bigints@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/has-bigints/-/has-bigints-1.0.2.tgz#0871bd3e3d51626f6ca0966668ba35d5602d6eaa"
@@ -4144,6 +4137,13 @@ iconv-lite@^0.4.24:
   integrity sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
+
+identity-obj-proxy@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/identity-obj-proxy/-/identity-obj-proxy-3.0.0.tgz#94d2bda96084453ef36fbc5aaec37e0f79f1fc14"
+  integrity sha1-lNK9qWCERT7zb7xarsN+D3nx/BQ=
+  dependencies:
+    harmony-reflect "^1.4.6"
 
 ieee754@^1.1.13:
   version "1.2.1"
