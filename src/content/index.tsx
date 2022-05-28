@@ -1,11 +1,10 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
+import style from '../index.css?inline'; // include Tailwind CSS
 import { isDev } from '../shared/utils';
 
 import Content from './Content';
-
-import style from '../index.css'; // include Tailwind CSS
 
 // isolated content injection
 const container = document.createElement('x-my-extension');
