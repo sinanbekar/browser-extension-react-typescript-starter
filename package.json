@@ -45,6 +45,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.30.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "28.1.0",
     "jest-chrome": "0.7.2",
     "jest-environment-jsdom": "28.1.0",
