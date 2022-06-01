@@ -4,7 +4,6 @@
   "prCreation": "not-pending",
   "prConcurrentLimit": 3,
   "prHourlyLimit": 1,
-  "reviewers": ["sinanbekar"],
   "stabilityDays": 3,
   "vulnerabilityAlerts": {
     "labels": ["security"]
