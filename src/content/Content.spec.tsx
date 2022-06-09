@@ -1,14 +1,18 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { render, screen } from '@testing-library/react';
+
+import store from '../app/store';
 
 import Content from './Content';
 
-it('should load and display Content', async () => {
-  render(<Content />);
-
-  expect(
-    screen.getByText((content, element) => {
-      return element !== null && element.tagName.toLowerCase() === 'h1' && content === 'Content';
-    })
-  ).toBeInTheDocument();
+describe('content', () => {
+  test('renders content example', () => {
+    render(
+      <Provider store={store}>
+        <Content />
+      </Provider>
+    );
+    expect(screen.getByText('Content Example')).toBeInTheDocument();
+  });
 });

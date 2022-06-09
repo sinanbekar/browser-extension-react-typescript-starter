@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { createRoot } from 'react-dom/client';
-
-import style from '../index.css?inline'; // include Tailwind CSS
-import { isDev } from '../shared/utils';
+import { Provider } from 'react-redux';
+import { applyMiddleware, Store } from '@eduardoac-skimlinks/webext-redux';
+import thunkMiddleware from 'redux-thunk';
 
 import Content from './Content';
 
-// isolated content injection
-const container = document.createElement('x-my-extension');
-const root = document.createElement('div');
-const styleEl = document.createElement('style');
-const shadowDOM = container.attachShadow?.({ mode: isDev ? 'open' : 'closed' }) || container;
-styleEl.setAttribute('type', 'text/css');
-styleEl.textContent = style; // TODO: include only used classes in Content.tsx and its children
-shadowDOM.appendChild(styleEl);
-shadowDOM.appendChild(root);
-document.body.prepend(container);
+withProxyStore(<Content />).then((component) => {
+  const container = document.createElement('my-extension-root');
+  document.body.append(container);
+  createRoot(container).render(component);
+});
 
-createRoot(root).render(
-  <React.StrictMode>
-    <Content />
-  </React.StrictMode>
-);
+async function withProxyStore(children: ReactElement, proxyStore?: Store): Promise<ReactElement> {
+  const store = proxyStore ?? new Store();
+
+  const middleware = [thunkMiddleware];
+  const storeWithMiddleware = applyMiddleware(store, ...middleware);
+
+  return storeWithMiddleware.ready().then(() => {
+    return <Provider store={store}>{children}</Provider>;
+  });
+}
