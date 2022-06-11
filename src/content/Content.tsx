@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 
-import { Counter } from '../features/counter/Counter';
+import { Counter } from './features/counter';
+
 const Content = (): ReactElement => {
   return (
     <div
