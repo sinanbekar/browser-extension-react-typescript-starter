@@ -1,9 +1,20 @@
 import React, { ReactElement } from 'react';
 
+import { Counter } from './features/counter';
+
 const Content = (): ReactElement => {
   return (
-    <div className="flex items-center justify-center">
-      <h1 className="text-xl">Content</h1>
+    <div
+      style={{
+        position: 'fixed',
+        zIndex: 999,
+        bottom: 0,
+        right: 0,
+        backgroundColor: 'rgb(0 0 0 / 30%)',
+      }}
+    >
+      <div style={{ display: 'flex', justifyContent: 'center' }}>Content Example</div>
+      <Counter />
     </div>
   );
 };

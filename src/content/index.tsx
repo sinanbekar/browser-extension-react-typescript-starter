@@ -1,24 +1,20 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { Store } from '@eduardoac-skimlinks/webext-redux';
 
-import style from '../index.css?inline'; // include Tailwind CSS
-import { isDev } from '../shared/utils';
+import { proxyStore as store } from '../app/proxyStore';
 
 import Content from './Content';
 
-// isolated content injection
-const container = document.createElement('x-my-extension');
-const root = document.createElement('div');
-const styleEl = document.createElement('style');
-const shadowDOM = container.attachShadow?.({ mode: isDev ? 'open' : 'closed' }) || container;
-styleEl.setAttribute('type', 'text/css');
-styleEl.textContent = style; // TODO: include only used classes in Content.tsx and its children
-shadowDOM.appendChild(styleEl);
-shadowDOM.appendChild(root);
-document.body.prepend(container);
+withProxyStore(<Content />, store).then((component) => {
+  const container = document.createElement('my-extension-root');
+  document.body.append(container);
+  createRoot(container).render(component);
+});
 
-createRoot(root).render(
-  <React.StrictMode>
-    <Content />
-  </React.StrictMode>
-);
+async function withProxyStore(children: ReactElement, proxyStore: Store): Promise<ReactElement> {
+  return proxyStore.ready().then(() => {
+    return <Provider store={proxyStore}>{children}</Provider>;
+  });
+}
