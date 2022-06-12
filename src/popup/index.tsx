@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 
 import Popup from './Popup';
 
-import '../index.css'; // include Tailwind CSS
+import '../tailwind.css';
 
 createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
