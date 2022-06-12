@@ -1,0 +1,147 @@
+<div align="center">
+  <br>
+ <img src="https://raw.githubusercontent.com/sinanbekar/browser-extension-react-typescript-starter/main/public/images/extension_128.png" alt="Browser Extension React & TypeScript Starter" width="128">
+  <br>
+  <h2>
+    Browser Extension <br>
+    React & TypeScript Starter
+    <br>
+  </h2>
+</div>
+
+<p align="center">A web extension (Manifest V3) starter kit with hot reload support, built with React, Typescript, Redux, Vite, ESLint, Prettier, TailwindCSS, Jest and more! </p>
+<hr />
+
+<div align="center" >
+  <a href="https://github.com/sinanbekar/browser-extension-react-typescript-starter/actions">
+    <img src="https://github.com/sinanbekar/browser-extension-react-typescript-starter/actions/workflows/ci.yml/badge.svg" alt="CI">
+  </a>
+    &nbsp;
+  <a>
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome">
+  </a>
+    &nbsp;
+  <a href="https://github.com/sinanbekar/browser-extension-react-typescript-starter/blob/main/LICENSE">
+    <img src="https://img.shields.io/apm/l/atomic-design-ui.svg" alt="MIT License">
+  </a>
+
+</div>
+
+<p align="center">
+  <a href="#features">Features</a> ·
+  <a href="#quick-start">Quick Start</a> ·
+  <a href="#important-notes">Important Notes</a> ·
+  <a href="#license">License</a>
+</p>
+
+## Features
+
+- **Instant HMR** (hot reload)[^1]
+- Global Redux support with persist option. Effortless communication between content, background, popup, options, and more pages.
+- Provides a basic content example and popup, options, and welcome pages with all React
+- Latest Manifest V3 support
+- Dynamic manifest.json
+- Includes ESLint configured to work with TypeScript and Prettier
+- Includes stylelint and commitlint configured
+- Includes tests with Jest
+
+#### Built with
+
+- React
+- TypeScript
+- Redux (toolkit and redux-persist)
+- TailwindCSS
+- Vite
+- Jest
+- ESLint
+- Prettier
+- stylelint
+- commitlint
+- commitizen
+- simple-git-hooks (lightweight husky alternative)
+- nano-staged
+
+[^1]: While fully supported and stable in most cases, rarely hard reloading is recommended.
+
+## Quick Start
+
+> **Warning** **Please see [Important Notes](#important-notes) before start using.**
+
+Ensure you have
+
+- [Node.js](https://nodejs.org) 14 or later installed
+- [Yarn](https://yarnpkg.com) installed
+
+### Use the Template
+
+#### GitHub Template
+
+[Create a repo from this template on GitHub](https://github.com/sinanbekar/browser-extension-react-typescript-starter/generate).
+
+**_or_**
+
+#### Clone to local
+
+If you prefer to do it manually with the cleaner git history
+
+> **Note** If you don't have yarn installed, run: npm install -g yarn
+
+```bash
+npx degit sinanbekar/browser-extension-react-typescript-starter my-web-extension
+cd my-web-extension
+```
+
+Then run the following:
+
+- `yarn install` to install dependencies.
+- `yarn dev` to start the development server.
+- `yarn build` to build an unpacked extension.
+
+- **Load extension in browser**
+
+  - Go to the browser address bar and type `chrome://extensions`
+  - Check the `Developer Mode` button to enable it.
+  - Click on the `Load Unpacked Extension` button.
+  - Select your `dist` folder in the project root.
+
+### Available Commands
+
+- `yarn clean` to remove dist folder. `dev` and `build` commands call this command.
+- `yarn ci:test` to run lint & unit test & type checking in ci environment. `ci:test:lint`, `ci:test:style`, `ci:test:unit` commands also available.
+- `yarn format` to fix code with eslint, prettier and stylelint.
+- `yarn lint` to call ESLint, Prettier and stylelint.
+- `yarn test` for testing.
+
+## Important Notes
+
+This starter includes experimental packages (tested in production but not by me) and is currently in development. You can see changes in this repo often for now.
+
+Please use with caution.
+
+#### [@crxjs/vite-plugin](https://github.com/crxjs/chrome-extension-tools)
+
+> **Note** This plugin powers the development side of this starter.
+>
+> docs: https://crxjs.dev/vite-plugin
+>
+> Special thanks to [@jacksteamdev](https://github.com/jacksteamdev) and contributors for this amazing plugin.
+
+#### [@eduardoac-skimlinks/webext-redux](https://github.com/eduardoacskimlinks/webext-redux)
+
+> **Note** It is a fork of [webext-redux](https://github.com/tshaddix/webext-redux) with Manifest V3 support and is currently in release candidate (RC).
+>
+> Please see https://github.com/tshaddix/webext-redux/pull/282
+>
+> **Warning** Do not update to react-redux version 8.x, it is not supported for now and is **break** your application.
+
+#### [reduxjs-toolkit-persist](https://github.com/ryanwillis/reduxjs-toolkit-persist)
+
+> **Note** It is a fork of [redux-persist](https://github.com/rt2zz/redux-persist) package which has not released a new version for years. This package includes the newest commits from the main repo and upgrades various dependencies to more recent versions.
+
+## Contributing
+
+This repository is following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard.
+
+## License
+
+MIT © [Sinan Bekar](https://sinan.engineer)
