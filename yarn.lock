@@ -1222,10 +1222,10 @@
   dependencies:
     chalk "^4.1.0"
 
-"@crxjs/vite-plugin@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@crxjs/vite-plugin/-/vite-plugin-1.0.6.tgz#58af55f6ddecbc879821cdc720fe1e119ff7f948"
-  integrity sha512-D+KzEq00PAMNlS448L0bHcE/HVh+u6qA1UlhFtpJyIuCJYBlS79uMAZxVEbr6ktwU0HtBqc4BulwtdJXZT0jGw==
+"@crxjs/vite-plugin@1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@crxjs/vite-plugin/-/vite-plugin-1.0.11.tgz#2ad1daedbb98b0984c5136dfa736e8b64b1ba8b7"
+  integrity sha512-MyWQIQtyuVlTFGRryrvimlgvbfC/3hw7jTMMjC3+zjLzQog05qxI9a8wDvO6iVZ+vSv+RuDttEAPom9ZBS+Nkw==
   dependencies:
     "@rollup/pluginutils" "^4.1.2"
     "@webcomponents/custom-elements" "^1.5.0"
