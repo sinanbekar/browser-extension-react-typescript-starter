@@ -10,7 +10,7 @@ const manifest: ManifestV3Export = {
   },
   content_scripts: [
     {
-      matches: ['<all_urls>'],
+      matches: ['http://*/*', 'https://*/*', 'file:///*'],
       js: ['src/content/index.tsx'],
     },
   ],
