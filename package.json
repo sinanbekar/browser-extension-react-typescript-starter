@@ -47,7 +47,7 @@
     "@types/redux-persist-webextension-storage": "1.0.0",
     "@typescript-eslint/eslint-plugin": "5.31.0",
     "@typescript-eslint/parser": "5.31.0",
-    "@vitejs/plugin-react": "2.0.0",
+    "@vitejs/plugin-react": "1.3.2",
     "autoprefixer": "10.4.7",
     "eslint": "8.20.0",
     "eslint-config-prettier": "8.5.0",
@@ -71,7 +71,7 @@
     "tailwindcss": "3.1.6",
     "ts-jest": "28.0.7",
     "typescript": "4.7.4",
-    "vite": "3.0.3"
+    "vite": "2.9.14"
   },
   "config": {
     "commitizen": {
