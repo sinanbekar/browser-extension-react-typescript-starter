@@ -1,2 +1,2 @@
 export { Counter } from './Counter';
-export { default as counterReducer } from './counterSlice';
+// TODO: fix //export { default as counterReducer } from './counterSlice';

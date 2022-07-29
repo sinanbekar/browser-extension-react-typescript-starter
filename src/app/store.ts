@@ -13,7 +13,7 @@ import {
 } from 'reduxjs-toolkit-persist';
 import { WebStorage } from 'reduxjs-toolkit-persist/lib/types';
 
-import { counterReducer } from '../content/features/counter';
+import { default as counterReducer } from '../content/features/counter/counterSlice';
 
 const persistConfig = {
   key: 'root',
