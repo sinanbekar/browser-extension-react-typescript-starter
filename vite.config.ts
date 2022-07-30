@@ -4,6 +4,7 @@ import { join } from 'path';
 import { defineConfig } from 'vite';
 
 import manifest from './src/manifest';
+import removeSrcFromHtmlPaths from './utils/plugins/removeSrcFromHtmlPaths';
 
 export default defineConfig({
   build: {
@@ -11,7 +12,10 @@ export default defineConfig({
       input: {
         welcome: join(__dirname, 'src/welcome/welcome.html'),
       },
+      output: {
+        chunkFileNames: 'assets/chunk-[hash].js',
+      },
     },
   },
-  plugins: [react(), crx({ manifest })],
+  plugins: [react(), crx({ manifest }), removeSrcFromHtmlPaths()],
 });
