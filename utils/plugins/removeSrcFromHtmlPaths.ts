@@ -45,8 +45,9 @@ function removeSrcFromHtmlPaths(): PluginOption {
         'web_accessible_resources',
       ]) {
         if (key === 'web_accessible_resources') {
+          // eslint-disable-next-line  @typescript-eslint/no-explicit-any
           for (const [index, obj] of Object.entries<any>(manifest[key])) {
-            for (const [resourceIndex, _] of Object.entries(obj.resources)) {
+            for (const [resourceIndex] of Object.entries(obj.resources)) {
               processManifestKey(`web_accessible_resources[${index}].resources[${resourceIndex}]`);
             }
           }
