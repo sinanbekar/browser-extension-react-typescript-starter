@@ -128,17 +128,9 @@ Then run the following:
 
 ## Important Notes
 
-This starter includes experimental packages (tested in production but not by me) and is currently in development. You can see changes in this repo often for now.
+This starter includes experimental packages and is currently in development. You can see changes in this repo often for now.
 
 Please use with caution.
-
-#### [@crxjs/vite-plugin](https://github.com/crxjs/chrome-extension-tools)
-
-> **Note** This plugin powers the development side of this starter.
->
-> docs: https://crxjs.dev/vite-plugin
->
-> Special thanks to [@jacksteamdev](https://github.com/jacksteamdev) and contributors for this amazing plugin.
 
 #### [@eduardoac-skimlinks/webext-redux](https://github.com/eduardoacskimlinks/webext-redux)
 
@@ -148,9 +140,15 @@ Please use with caution.
 >
 > **Warning** Do not update to react-redux version 8.x, it is not supported for now and is **break** your application.
 
-#### [reduxjs-toolkit-persist](https://github.com/ryanwillis/reduxjs-toolkit-persist)
+### Bundling
 
-> **Note** It is a fork of [redux-persist](https://github.com/rt2zz/redux-persist) package which has not released a new version for years. This package includes the newest commits from the main repo and upgrades various dependencies to more recent versions.
+#### [@crxjs/vite-plugin](https://github.com/crxjs/chrome-extension-tools)
+
+> **Note** This plugin powers the development side of this starter.
+>
+> docs: https://crxjs.dev/vite-plugin
+>
+> Special thanks to [@jacksteamdev](https://github.com/jacksteamdev) and contributors for this amazing plugin.
 
 ## Contributing
 
