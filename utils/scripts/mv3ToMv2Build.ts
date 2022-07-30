@@ -4,6 +4,10 @@ import * as path from 'path';
 const BASE_OUT_DIR = 'dist';
 const baseOutDir = path.resolve(BASE_OUT_DIR);
 
+if (!fs.existsSync(baseOutDir)) {
+  throw Error(`${BASE_OUT_DIR} dir does not exist. Please run base build first.`);
+}
+
 const outDir = `${path.dirname(path.basename(baseOutDir))}/${BASE_OUT_DIR}_firefox`;
 
 fs.copySync(baseOutDir, outDir);

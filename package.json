@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "run-s clean && vite",
-    "build": "run-s clean && tsc && vite build",
-    "build:firefox": "run-s build && TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node utils/scripts/mv3ToMv2.ts",
+    "build": "run-s clean && tsc && vite build && run-s firefox-build",
+    "firefox-build": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node utils/scripts/mv3ToMv2Build.ts",
     "clean": "run-p clean:*",
     "clean:dist": "rimraf dist",
     "clean:dist_firefox": "rimraf dist_firefox",
