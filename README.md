@@ -97,6 +97,7 @@ If you prefer to do it manually with the cleaner git history
 ```bash
 npx degit sinanbekar/browser-extension-react-typescript-starter my-web-extension
 cd my-web-extension
+git init
 ```
 
 Then run the following:
