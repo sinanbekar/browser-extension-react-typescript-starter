@@ -1,3 +1,5 @@
+import browser from 'webextension-polyfill';
+
 import store from '../app/store';
 
 store.subscribe(() => {
@@ -5,11 +7,10 @@ store.subscribe(() => {
 });
 
 // show welcome page on new install
-chrome.runtime.onInstalled.addListener(async (details) => {
+browser.runtime.onInstalled.addListener(async (details) => {
   if (details.reason === 'install') {
-    //show the welcome page
-    const url = chrome.runtime.getURL('src/welcome/welcome.html');
-    await chrome.tabs.create({ url });
+    const url = browser.runtime.getURL('src/welcome/welcome.html');
+    await browser.tabs.create({ url });
   }
 });
 
