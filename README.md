@@ -9,7 +9,7 @@
   </h2>
 </div>
 
-<p align="center">A web extension (Manifest V3) starter kit with hot reload support, built with React, Typescript, Redux, Vite, ESLint, Prettier, TailwindCSS, Jest and more! </p>
+<p align="center">A cross-platform (Chrome, Firefox, Edge, Opera, Brave) web browser extension (Manifest V3 and Manifest V2) starter kit with hot reload support, built with React, Typescript, Redux, Vite, ESLint, Prettier, TailwindCSS, Jest and more! </p>
 <hr />
 
 <div align="center" >
@@ -37,9 +37,11 @@
 ## Features
 
 - **Instant HMR** (hot reload)[^1]
+- Write once run on any browser
 - Global Redux support with persist option. Effortless communication between content, background, popup, options, and more pages.
 - Provides a basic content example and popup, options, and welcome pages with all React
 - Latest Manifest V3 support
+- Manifest V2 support (beta)
 - Dynamic manifest.json
 - Includes ESLint configured to work with TypeScript and Prettier
 - Includes stylelint and commitlint configured
@@ -62,6 +64,12 @@
 - nano-staged
 
 [^1]: While fully supported and stable in most cases, rarely hard reloading is recommended.
+
+## Browser Support
+
+| [![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png)](/) | [![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png)](/) | [![Edge](https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png)](/) | [![Opera](https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png)](/) | [![Brave](https://raw.github.com/alrra/browser-logos/master/src/brave/brave_48x48.png)](/) |
+| --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| ✔                                                                                             | ✔ (Beta)                                                                                         | ✔                                                                                       | ✔                                                                                          | ✔                                                                                          |
 
 ## Quick Start
 
@@ -97,12 +105,18 @@ Then run the following:
 - `yarn dev` to start the development server.
 - `yarn build` to build an unpacked extension.
 
-- **Load extension in browser**
+- **Load extension in Chrome (Chromium)**
 
   - Go to the browser address bar and type `chrome://extensions`
   - Check the `Developer Mode` button to enable it.
   - Click on the `Load Unpacked Extension` button.
   - Select your `dist` folder in the project root.
+
+- **Load extension in Firefox**
+
+  - Go to the browser address bar and type `about://debugger`
+  - Click on the `Load Temporary Add-on` button.
+  - Select your `dist_firefox` folder in the project root.
 
 ### Available Commands
 

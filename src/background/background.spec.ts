@@ -1,16 +1,16 @@
-import { chrome } from 'jest-chrome';
+import { chrome as browser } from 'jest-chrome';
 
 describe('background', () => {
   test('chrome api events', () => {
     const listenerSpy = jest.fn();
     const sendResponseSpy = jest.fn();
 
-    chrome.runtime.onMessage.addListener(listenerSpy);
+    browser.runtime.onMessage.addListener(listenerSpy);
 
     expect(listenerSpy).not.toBeCalled();
-    expect(chrome.runtime.onMessage.hasListeners()).toBe(true);
+    expect(browser.runtime.onMessage.hasListeners()).toBe(true);
 
-    chrome.runtime.onMessage.callListeners(
+    browser.runtime.onMessage.callListeners(
       { greeting: 'hello' }, // message
       {}, // MessageSender object
       sendResponseSpy // SendResponse function
