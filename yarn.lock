@@ -1261,10 +1261,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/selector-specificity/-/selector-specificity-2.0.2.tgz#1bfafe4b7ed0f3e4105837e056e0a89b108ebe36"
   integrity sha512-IkpVW/ehM1hWKln4fCA3NzJU8KwD+kIOvPZA4cqxoJHtE21CCzjyp+Kxbu0i5I4tBNOlXPL9mjwnWlL0VEG4Fg==
 
-"@eduardoac-skimlinks/webext-redux@3.0.0-release-candidate":
-  version "3.0.0-release-candidate"
-  resolved "https://registry.yarnpkg.com/@eduardoac-skimlinks/webext-redux/-/webext-redux-3.0.0-release-candidate.tgz#b8096a59362654822eed27ad36d51c30abaa48d2"
-  integrity sha512-zOQJ97ffFKbAa1Q01bN/NLqiN8YwQUkrDe67PvDaSZPYSecHXHOSPwyx/TwVxQn3SG2OH2EPxWgFd8xLGuN/2g==
+"@eduardoac-skimlinks/webext-redux@3.0.1-release-candidate":
+  version "3.0.1-release-candidate"
+  resolved "https://registry.yarnpkg.com/@eduardoac-skimlinks/webext-redux/-/webext-redux-3.0.1-release-candidate.tgz#62ebf214a184788ceeb29866405847c221ea2c6b"
+  integrity sha512-Gv7LOjiqye+umkR4v0FqcWo8goqP333Lr2kqtMIWJMs5S12T5b3G87PoxuVqZByJk2Ebc6mJ/v7f3HMVzgFT+w==
   dependencies:
     lodash.assignin "^4.2.0"
     lodash.clonedeep "^4.5.0"
