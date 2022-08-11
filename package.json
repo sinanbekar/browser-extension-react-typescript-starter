@@ -26,7 +26,7 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "@eduardoac-skimlinks/webext-redux": "3.0.0-release-candidate",
+    "@eduardoac-skimlinks/webext-redux": "3.0.1-release-candidate",
     "@reduxjs/toolkit": "1.8.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
