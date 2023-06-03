@@ -30,7 +30,7 @@
     "@reduxjs/toolkit": "1.8.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-redux": "7.2.8",
+    "react-redux": "8.0.7",
     "redux-persist-webextension-storage": "1.0.2",
     "reduxjs-toolkit-persist": "7.2.1",
     "webextension-polyfill": "0.9.0"
