@@ -38,24 +38,9 @@ jobs:
         run: rm -rf node_modules && yarn install --frozen-lockfile
 
       - name: Lint
-        run: yarn ci:test:lint
+        run: yarn lint
 
-  typecheck:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          cache: 'yarn'
-
-      - name: Install dependencies
-        run: rm -rf node_modules && yarn install --frozen-lockfile
-
-      - name: Test types
-        run: yarn ci:test:types
-
-  unit:
+  test:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -77,4 +62,4 @@ jobs:
         run: rm -rf node_modules && yarn install --frozen-lockfile
 
       - name: Unit test
-        run: yarn ci:test:unit
+        run: yarn ci:test

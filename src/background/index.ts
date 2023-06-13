@@ -3,7 +3,9 @@ import browser from 'webextension-polyfill';
 import store from '../app/store';
 
 store.subscribe(() => {
-  console.log('state', store.getState());
+  // access store state
+  // const state = store.getState();
+  // console.log('state', state);
 });
 
 // show welcome page on new install
@@ -14,5 +16,3 @@ browser.runtime.onInstalled.addListener(async (details) => {
     await browser.tabs.create({ url });
   }
 });
-
-export {};

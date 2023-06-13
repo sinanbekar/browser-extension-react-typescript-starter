@@ -1,4 +1,4 @@
-import { ManifestV3Export } from '@crxjs/vite-plugin';
+import type { ManifestV3Export } from '@crxjs/vite-plugin';
 
 // NOTE: do not include src/ in paths,
 // vite root folder: src, public folder: public (based on the project root)

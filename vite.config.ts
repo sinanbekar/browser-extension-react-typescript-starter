@@ -2,7 +2,6 @@ import { crx } from '@crxjs/vite-plugin';
 import react from '@vitejs/plugin-react';
 import { join, resolve } from 'path';
 import { defineConfig } from 'vite';
-
 import manifest from './src/manifest';
 
 export default defineConfig({
@@ -21,6 +20,7 @@ export default defineConfig({
     outDir: resolve(__dirname, 'dist'),
     rollupOptions: {
       input: {
+        // see web_accessible_resources in the manifest config
         welcome: join(__dirname, 'src/welcome/welcome.html'),
       },
       output: {
