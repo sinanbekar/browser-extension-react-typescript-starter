@@ -10,7 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-dist_firefox
+dist-firefox-v2
 *.local
 
 # Editor directories and files
