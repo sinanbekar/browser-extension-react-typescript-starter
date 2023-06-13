@@ -59,7 +59,7 @@
 - simple-git-hooks (lightweight husky alternative)
 - nano-staged
 
-[^1]: While fully supported and stable in most cases, rarely hard reloading is recommended.
+[^1]: While it is fully supported and stable in most cases, hard reloading is rarely recommended.
 
 ## Browser Support
 
@@ -69,11 +69,9 @@
 
 ## Quick Start
 
-> **Warning** **Please see [Important Notes](#important-notes) before start using.**
-
 Ensure you have
 
-- [Node.js](https://nodejs.org) 14 or later installed
+- [Node.js](https://nodejs.org) 16 or later installed
 - [Yarn](https://yarnpkg.com) installed
 
 ### Use the Template
@@ -102,40 +100,31 @@ Then run the following:
 - `yarn dev` to start the development server.
 - `yarn build` to build an unpacked extension.
 
-- **Load extension in Chrome (Chromium)**
+- **Load extension in Chrome (Chromium, Manifest V3)**
 
   - Go to the browser address bar and type `chrome://extensions`
   - Check the `Developer Mode` button to enable it.
   - Click on the `Load Unpacked Extension` button.
   - Select your `dist` folder in the project root.
 
-- **Load extension in Firefox**
+- **Load extension in Firefox (Manifest V2)**
 
   - Go to the browser address bar and type `about://debugger`
   - Click on the `Load Temporary Add-on` button.
-  - Select your `dist_firefox` folder in the project root.
+  - Select your `dist-firefox-v2` folder in the project root.
 
 ### Available Commands
 
 - `yarn clean` to remove dist folder. `dev` and `build` commands call this command.
-- `yarn ci:test` to run lint & unit test & type checking in ci environment. `ci:test:lint`, `ci:test:style`, `ci:test:unit` commands also available.
 - `yarn format` to fix code with eslint and prettier.
 - `yarn lint` to call ESLint and Prettier.
 - `yarn test` for testing.
 
-## Important Notes
+### Redux
 
-This starter includes experimental packages and is currently in development. You can see changes in this repo often for now.
-
-Please use with caution.
+You can use redux (redux-toolkit) as state manager between popus, background, content and custom pages. Read the documentation for more.
 
 #### [@eduardoac-skimlinks/webext-redux](https://github.com/eduardoacskimlinks/webext-redux)
-
-> **Note** It is a fork of [webext-redux](https://github.com/tshaddix/webext-redux) with Manifest V3 support and is currently in release candidate (RC).
->
-> Please see https://github.com/tshaddix/webext-redux/pull/282
->
-> **Warning** Do not update to react-redux version 8.x, it is not supported for now and is **break** your application.
 
 ### Bundling
 

@@ -1,12 +1,13 @@
-import React, { ReactElement } from 'react';
+import { Counter } from '../app/features/counter';
 
-const Popup = (): ReactElement => {
-  document.body.style.width = '15rem';
-  document.body.style.height = '15rem';
+const Popup = () => {
+  document.body.className = 'w-[30rem] h-[10rem]';
+
   return (
-    <div className="flex h-screen items-center justify-center">
-      <h1>Popup</h1>
-    </div>
+    <>
+      <div className="flex justify-center mt-2 text-base">Popup Counter</div>
+      <Counter />
+    </>
   );
 };
 

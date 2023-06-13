@@ -1,6 +1,7 @@
 import browser from 'webextension-polyfill';
+import store, { initializeWrappedStore } from '../app/store';
 
-import store from '../app/store';
+initializeWrappedStore();
 
 store.subscribe(() => {
   // access store state
