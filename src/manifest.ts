@@ -1,14 +1,15 @@
-import type { ManifestV3Export } from '@crxjs/vite-plugin';
+import { defineManifest } from '@crxjs/vite-plugin';
+import { version } from '../package.json';
 
 // NOTE: do not include src/ in paths,
 // vite root folder: src, public folder: public (based on the project root)
 // @see ../vite.config.ts#L16
 
-const manifest: ManifestV3Export = {
+const manifest = defineManifest(async (env) => ({
   manifest_version: 3,
-  name: 'Browser Extension TypeScript & React Starter',
+  name: `${env.mode === 'development' ? '[Dev] ' : ''}Browser Extension TypeScript & React Starter`,
   description: 'Browser Extension, TypeScript, React',
-  version: '0.1',
+  version,
   background: {
     service_worker: 'background/index.ts',
   },
@@ -48,6 +49,6 @@ const manifest: ManifestV3Export = {
     '128': 'images/extension_128.png',
   },
   permissions: ['storage', 'tabs'],
-};
+}));
 
 export default manifest;
