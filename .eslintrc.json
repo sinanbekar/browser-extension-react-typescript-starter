@@ -1,14 +1,15 @@
 {
   "env": {
-    "es2020": true
+    "es2020": true,
+    "browser": true
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "react-app",
-    "react-app/jest"
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -16,52 +17,18 @@
     "ecmaVersion": 2020,
     "ecmaFeatures": { "jsx": true }
   },
-  "plugins": [
-    "import",
-    "simple-import-sort",
-    "react",
-    "react-hooks",
-    "@typescript-eslint",
-    "prettier"
-  ],
+  "plugins": ["@typescript-eslint", "prettier", "react", "react-hooks"],
   "rules": {
-    "no-unused-expressions": "off",
-    "@typescript-eslint/no-unused-expressions": 2,
-    "@typescript-eslint/triple-slash-reference": "off",
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": 0
   },
-
   "overrides": [
     {
-      "files": [".*rc.js", "*.config.js"],
+      "files": [".*rc.js", ".*rc.cjs", "*.config.js", "*.config.cjs"],
       "env": {
         "node": true
       }
-    },
-    {
-      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
-      "rules": {
-        "simple-import-sort/imports": [
-          "warn",
-          {
-            "groups": [
-              // Packages `react` related packages come first.
-              ["^react", "^@?\\w"],
-              // Internal packages.
-              ["^(@|components)(/.*|$)"],
-              // Side effect imports.
-              ["^\\u0000"],
-              // Parent imports. Put `..` last.
-              ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-              // Other relative imports. Put same-folder imports and `.` last.
-              ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-              // Style imports.
-              ["^.+\\.?(css)$"]
-            ]
-          }
-        ]
-      }
     }
-  ]
+  ],
+  "ignorePatterns": ["dist/**", "dist-firefox-v2"]
 }
