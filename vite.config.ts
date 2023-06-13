@@ -7,6 +7,14 @@ import manifest from './src/manifest';
 import removeSrcFromHtmlPaths from './utils/plugins/removeSrcFromHtmlPaths';
 
 export default defineConfig({
+  // @see https://github.com/crxjs/chrome-extension-tools/issues/696
+  server: {
+    port: 5173,
+    strictPort: true,
+    hmr: {
+      port: 5173,
+    },
+  },
   build: {
     rollupOptions: {
       input: {
