@@ -1,7 +1,7 @@
 import { exec, execSync } from 'child_process';
 import * as fs from 'fs';
 import * as glob from 'glob';
-import { get as getKeyValue, set as setKeyValue } from 'lodash';
+import { get as getKeyValue, set as setKeyValue } from 'lodash-es';
 import { basename, dirname, parse, resolve } from 'path';
 import type { PluginOption } from 'vite';
 
