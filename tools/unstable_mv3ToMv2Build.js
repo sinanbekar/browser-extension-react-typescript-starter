@@ -1,4 +1,6 @@
-import * as fs from 'fs-extra';
+//@ts-check
+
+import fs from 'fs-extra';
 import * as path from 'path';
 
 const BASE_OUT_DIR = 'dist';
@@ -8,12 +10,12 @@ if (!fs.existsSync(baseOutDir)) {
   throw Error(`${BASE_OUT_DIR} dir does not exist. Please run base build first.`);
 }
 
-const outDir = `${path.dirname(path.basename(baseOutDir))}/${BASE_OUT_DIR}_firefox`;
+const outDir = `${path.dirname(path.basename(baseOutDir))}/${BASE_OUT_DIR}-firefox-v2`;
 
 fs.copySync(baseOutDir, outDir);
 
 const manifestPath = path.resolve(outDir, 'manifest.json');
-const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8')); // TODO: typing
+const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
 
 manifest.manifest_version = 2;
 

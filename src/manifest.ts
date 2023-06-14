@@ -1,35 +1,40 @@
-import { ManifestV3Export } from '@crxjs/vite-plugin';
+import { defineManifest } from '@crxjs/vite-plugin';
+import { version } from '../package.json';
 
-const manifest: ManifestV3Export = {
+// NOTE: do not include src/ in paths,
+// vite root folder: src, public folder: public (based on the project root)
+// @see ../vite.config.ts#L16
+
+const manifest = defineManifest(async (env) => ({
   manifest_version: 3,
-  name: 'Browser Extension TypeScript & React Starter',
+  name: `${env.mode === 'development' ? '[Dev] ' : ''}Browser Extension TypeScript & React Starter`,
   description: 'Browser Extension, TypeScript, React',
-  version: '0.1',
+  version,
   background: {
-    service_worker: 'src/background/index.ts',
+    service_worker: 'background/index.ts',
   },
   content_scripts: [
     {
       matches: ['http://*/*', 'https://*/*', 'file:///*'],
-      js: ['src/content/index.tsx'],
+      js: ['content/index.tsx'],
     },
   ],
   host_permissions: ['<all_urls>'],
   options_ui: {
-    page: 'src/options/options.html',
+    page: 'options/options.html',
     open_in_tab: true,
   },
   web_accessible_resources: [
     {
       resources: [
         // this file is web accessible; it supports HMR b/c it's declared in `rollupOptions.input`
-        'src/welcome/welcome.html',
+        'welcome/welcome.html',
       ],
       matches: ['<all_urls>'],
     },
   ],
   action: {
-    default_popup: 'src/popup/popup.html',
+    default_popup: 'popup/popup.html',
     default_icon: {
       '16': 'images/extension_16.png',
       '32': 'images/extension_32.png',
@@ -44,6 +49,6 @@ const manifest: ManifestV3Export = {
     '128': 'images/extension_128.png',
   },
   permissions: ['storage', 'tabs'],
-};
+}));
 
 export default manifest;

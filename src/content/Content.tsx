@@ -1,19 +1,9 @@
-import React, { ReactElement } from 'react';
+import { Counter } from '../app/features/counter';
 
-import { Counter } from './features/counter';
-
-const Content = (): ReactElement => {
+const Content = () => {
   return (
-    <div
-      style={{
-        position: 'fixed',
-        zIndex: 999,
-        bottom: 0,
-        right: 0,
-        backgroundColor: 'rgb(0 0 0 / 30%)',
-      }}
-    >
-      <div style={{ display: 'flex', justifyContent: 'center' }}>Content Example</div>
+    <div className="fixed z-[999] bottom-2 right-2 shadow-xl border-[1px] bg-white bg-opacity-10">
+      <div className="flex justify-center mt-2 text-base">Content Counter</div>
       <Counter />
     </div>
   );

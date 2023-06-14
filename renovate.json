@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base", ":semanticCommits"],
+  "extends": ["config:base", ":semanticCommits", ":preserveSemverRanges"],
   "postUpdateOptions": ["yarnDedupeHighest"],
   "prCreation": "not-pending",
   "prConcurrentLimit": 3,
