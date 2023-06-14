@@ -122,7 +122,7 @@ Then run the following:
 
 ### Redux
 
-You can use redux (redux-toolkit) as state manager between popus, background, content and custom pages. Read the documentation for more.
+You can use redux (redux-toolkit) as state manager between popup, background, content and custom pages. Read the documentation for more.
 
 #### [@eduardoac-skimlinks/webext-redux](https://github.com/eduardoacskimlinks/webext-redux)
 
