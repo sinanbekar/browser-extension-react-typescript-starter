@@ -43,6 +43,6 @@ export const useCounterStore = create<CounterState>()(
   )
 );
 
-wrapStore(useCounterStore);
+export const counterStoreReadyPromise = wrapStore(useCounterStore);
 
 export default useCounterStore;

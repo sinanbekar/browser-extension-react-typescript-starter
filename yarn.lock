@@ -4798,10 +4798,10 @@ walker@^1.0.8:
   dependencies:
     makeerror "1.0.12"
 
-webext-zustand@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/webext-zustand/-/webext-zustand-0.1.2.tgz#76dd2daa7b056ff80688e987f24e824e8fe62aff"
-  integrity sha512-gfv/npRQyNRnWdCgI/kIaNXVEaw/npO+O7Uw5cnq/Am28v4QSd4+nAJ47Wq8XXq5NEK6gN+oPquFQOwzoomBJQ==
+webext-zustand@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/webext-zustand/-/webext-zustand-0.2.0.tgz#bea397c4b46b39e0e945a4abec708727c80a341c"
+  integrity sha512-CpEyOdWA5hzwvMazbzJycSGk6GGx+VBSZmibyzzUNlGWdF/RvQZpYpFe/H3/Aw1m+hKrl8NOwTJdt5iwxF/+fg==
   dependencies:
     "@eduardoac-skimlinks/webext-redux" "3.0.1-release-candidate"
 

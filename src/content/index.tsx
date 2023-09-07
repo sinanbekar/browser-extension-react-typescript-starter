@@ -4,6 +4,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { debounce } from 'lodash-es';
 import { twind, config, cssom, observe, stringify } from './twind';
+import { counterStoreReadyPromise } from '../shared/counter';
 import Content from './Content';
 
 const contentRoot = document.createElement('div');
@@ -40,8 +41,10 @@ shadowWrapper.id = 'root';
 shadowWrapper.style.display = 'contents';
 shadowRoot.appendChild(shadowWrapper);
 
-createRoot(shadowWrapper).render(
-  <React.StrictMode>
-    <Content />
-  </React.StrictMode>
-);
+counterStoreReadyPromise.then(() => {
+  createRoot(shadowWrapper).render(
+    <React.StrictMode>
+      <Content />
+    </React.StrictMode>
+  );
+});

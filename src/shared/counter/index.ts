@@ -1,2 +1,2 @@
-export { useCounterStore } from './store';
+export { useCounterStore, counterStoreReadyPromise } from './store';
 export { Counter } from './Counter';
