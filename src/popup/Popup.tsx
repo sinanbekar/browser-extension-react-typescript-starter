@@ -1,4 +1,4 @@
-import { Counter } from '../app/features/counter';
+import { Counter } from '../shared/counter';
 
 const Popup = () => {
   document.body.className = 'w-[30rem] h-[15rem]';

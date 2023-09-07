@@ -1,12 +1,9 @@
 import browser from 'webextension-polyfill';
-import store, { initializeWrappedStore } from '../app/store';
+import store from '../shared/counter/store';
 
-initializeWrappedStore();
-
-store.subscribe(() => {
+store.subscribe((state) => {
   // access store state
-  // const state = store.getState();
-  // console.log('state', state);
+  console.log(state);
 });
 
 // show welcome page on new install

@@ -1,19 +1,14 @@
 import { useState } from 'react';
-
-import {
-  decrement,
-  increment,
-  incrementAsync,
-  incrementByAmount,
-  incrementIfOdd,
-  selectCount,
-} from './counterSlice';
-
-import { useAppDispatch, useAppSelector } from '../../hooks';
+import { useCounterStore } from './store';
 
 export function Counter() {
-  const count = useAppSelector(selectCount);
-  const dispatch = useAppDispatch();
+  const count = useCounterStore((state) => state.count);
+  const increment = useCounterStore((state) => state.increment);
+  const decrement = useCounterStore((state) => state.decrement);
+  const incrementByAmount = useCounterStore((state) => state.incrementByAmount);
+  const incrementAsync = useCounterStore((state) => state.incrementAsync);
+  const incrementIfOdd = useCounterStore((state) => state.incrementIfOdd);
+
   const [incrementAmount, setIncrementAmount] = useState('2');
 
   const incrementValue = Number(incrementAmount) || 0;
@@ -24,7 +19,7 @@ export function Counter() {
         <button
           className="ml-1 mr-2 px-3 text-2xl outline-none border-2 border-solid border-transparent text-purple-500 pb-1 cursor-pointer bg-purple-800 bg-opacity-10 hover:bg-opacity-20 rounded-[2px]"
           aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
+          onClick={() => decrement()}
         >
           -
         </button>
@@ -32,7 +27,7 @@ export function Counter() {
         <button
           className="ml-1 mr-2 px-3 text-2xl outline-none border-2 border-solid border-transparent text-purple-500 pb-1 cursor-pointer bg-purple-800 bg-opacity-10 hover:bg-opacity-20 rounded-[2px]"
           aria-label="Increment value"
-          onClick={() => dispatch(increment())}
+          onClick={() => increment()}
         >
           +
         </button>
@@ -46,19 +41,19 @@ export function Counter() {
         />
         <button
           className="ml-1 mr-2 px-3 pb-1 text-2xl outline-none border-2 border-solid border-transparent text-purple-500 bg-purple-800 bg-opacity-10 hover:bg-opacity-20 rounded-[2px]"
-          onClick={() => dispatch(incrementByAmount(incrementValue))}
+          onClick={() => incrementByAmount(incrementValue)}
         >
           Add Amount
         </button>
         <button
           className="ml-1 mr-2 px-3 pb-1 text-2xl outline-none border-2 border-solid border-transparent text-purple-500 bg-purple-800 bg-opacity-10 hover:bg-opacity-20 rounded-[2px]"
-          onClick={() => dispatch(incrementAsync(incrementValue))}
+          onClick={() => incrementAsync(incrementValue)}
         >
           Add Async
         </button>
         <button
           className="ml-1 mr-2 px-3 pb-1 text-2xl outline-none border-2 border-solid border-transparent text-purple-500 bg-purple-800 bg-opacity-10 hover:bg-opacity-20 rounded-[2px]"
-          onClick={() => dispatch(incrementIfOdd(incrementValue))}
+          onClick={() => incrementIfOdd(incrementValue)}
         >
           Add If Odd
         </button>

@@ -1,4 +1,4 @@
-import { Counter } from '../app/features/counter';
+import { Counter } from '../shared/counter';
 
 const Content = () => {
   return (
