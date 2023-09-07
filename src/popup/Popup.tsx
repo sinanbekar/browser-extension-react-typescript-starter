@@ -1,7 +1,7 @@
 import { Counter } from '../app/features/counter';
 
 const Popup = () => {
-  document.body.className = 'w-[30rem] h-[10rem]';
+  document.body.className = 'w-[30rem] h-[15rem]';
 
   return (
     <>
