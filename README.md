@@ -34,6 +34,8 @@
   <a href="#license">License</a>
 </p>
 
+> 🚀 **NEW** (experimental) Zustand for state management instead Redux, with [`webext-zustand`](https://github.com/sinanbekar/webext-zustand) package. You can try it now on the branch [`experimental-zustand`](https://github.com/sinanbekar/browser-extension-react-typescript-starter/tree/experimental-zustand)
+
 ## Features
 
 - **Instant HMR** (hot reload)[^1]
