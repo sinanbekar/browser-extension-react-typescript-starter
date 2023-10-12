@@ -113,7 +113,7 @@ Then run the following:
 
   - Go to the browser address bar and type `about:debugging#/runtime/this-firefox` (not the `about:addons` or `about://debugger`)
   - Click on the `Load Temporary Add-on` button.
-  - Select your `dist-firefox-v2` folder in the project root.
+  - Select `manifest.json` in your `dist-firefox-v2` folder in the project root.
 
 ### Available Commands
 
